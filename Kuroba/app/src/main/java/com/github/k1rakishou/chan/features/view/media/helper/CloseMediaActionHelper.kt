@@ -38,7 +38,8 @@ class CloseMediaActionHelper(
   private val topPaddingFunc: () -> Int,
   private val bottomPaddingFunc: () -> Int,
   private val topGestureInfo: GestureInfo? = null,
-  private val bottomGestureInfo: GestureInfo? = null
+  private val bottomGestureInfo: GestureInfo? = null,
+  private val swipeToCloseEnabledFunc: () -> Boolean = { true }
 ) {
   private var velocityTracker: VelocityTracker? = null
   private var scroller: OverScroller? = null
@@ -206,7 +207,7 @@ class CloseMediaActionHelper(
       val velocityX = velocityTracker!!.xVelocity.toInt()
       val velocityY = velocityTracker!!.yVelocity.toInt()
 
-      if (Math.abs(velocityX) > FLING_MIN_VELOCITY || Math.abs(velocityY) > FLING_MIN_VELOCITY) {
+      if ((Math.abs(velocityX) > FLING_MIN_VELOCITY || Math.abs(velocityY) > FLING_MIN_VELOCITY) && swipeToCloseEnabledFunc()) {
         scroller!!.setFriction(0.5f)
 
         scroller!!.fling(

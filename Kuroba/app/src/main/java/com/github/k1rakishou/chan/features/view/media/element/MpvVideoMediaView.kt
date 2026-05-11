@@ -217,8 +217,10 @@ class MpvVideoMediaView(
       topPaddingFunc = { toolbarHeight() },
       bottomPaddingFunc = { 0 },
       topGestureInfo = createGestureAction(isTopGesture = true),
-      bottomGestureInfo = createGestureAction(isTopGesture = false)
+      bottomGestureInfo = createGestureAction(isTopGesture = false),
+      swipeToCloseEnabledFunc = { kurobaSettings.application.controllerSwipeable.readBlocking() }
     )
+
 
     gestureDetector = GestureDetector(
       context,

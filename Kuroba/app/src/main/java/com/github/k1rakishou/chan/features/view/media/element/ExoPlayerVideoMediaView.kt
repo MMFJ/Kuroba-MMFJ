@@ -145,8 +145,10 @@ class ExoPlayerVideoMediaView(
       topPaddingFunc = { toolbarHeight() },
       bottomPaddingFunc = { playerControlsHeight() },
       topGestureInfo = createGestureAction(isTopGesture = true),
-      bottomGestureInfo = createGestureAction(isTopGesture = false)
+      bottomGestureInfo = createGestureAction(isTopGesture = false),
+      swipeToCloseEnabledFunc = { kurobaSettings.application.controllerSwipeable.readBlocking() }
     )
+
 
     gestureDetector = GestureDetector(
       context,

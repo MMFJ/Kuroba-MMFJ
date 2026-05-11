@@ -83,7 +83,8 @@ class UnsupportedMediaView(
       topPaddingFunc = { toolbarHeight() },
       bottomPaddingFunc = { globalWindowInsetsManager.bottom() },
       topGestureInfo = createGestureAction(isTopGesture = true),
-      bottomGestureInfo = createGestureAction(isTopGesture = false)
+      bottomGestureInfo = createGestureAction(isTopGesture = false),
+      swipeToCloseEnabledFunc = { kurobaSettings.application.controllerSwipeable.readBlocking() }
     )
 
     val mediaLocation = viewableMedia.mediaLocation

@@ -58,15 +58,15 @@ android {
 
         when (kurobaBuildType) {
           KurobaBuildType.Stable -> {
-              manifestPlaceholders["appName"] = "KurobaEx"
+              manifestPlaceholders["appName"] = "KurobaEx MMFJ"
               manifestPlaceholders["iconLoc"] = "@mipmap/ic_launcher_release"
           }
           KurobaBuildType.Beta -> {
-              manifestPlaceholders["appName"] = "KurobaEx-beta"
+              manifestPlaceholders["appName"] = "KurobaEx-beta MMFJ"
               manifestPlaceholders["iconLoc"] = "@mipmap/ic_launcher_beta"
           }
           KurobaBuildType.Dev -> {
-              manifestPlaceholders["appName"] = "KurobaEx-dev"
+              manifestPlaceholders["appName"] = "KurobaEx-dev MMFJ"
               manifestPlaceholders["iconLoc"] = "@mipmap/ic_launcher_dev"
           }
         }
