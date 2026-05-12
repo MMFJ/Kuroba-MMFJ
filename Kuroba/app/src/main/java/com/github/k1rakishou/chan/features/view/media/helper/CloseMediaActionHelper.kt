@@ -589,10 +589,10 @@ class CloseMediaActionHelper(
     private val FLING_MAX_VELOCITY = dp(3000f).toFloat()
     private val FLING_ANIMATION_DIST = dp(4000f)
     private val INTERPOLATOR = DecelerateInterpolator(2f)
-    private val TEXT_TO_TOUCH_POSITION_OFFSET_PORT = dp(72f)
-    private val TEXT_TO_TOUCH_POSITION_OFFSET_LAND = dp(60f)
-    private val DEAD_ZONE_HEIGHT_PORT = dp(52f)
-    private val DEAD_ZONE_HEIGHT_LAND = dp(40f)
+    private val TEXT_TO_TOUCH_POSITION_OFFSET_PORT = dp(54f)
+    private val TEXT_TO_TOUCH_POSITION_OFFSET_LAND = dp(45f)
+    private val DEAD_ZONE_HEIGHT_PORT = dp(39f)
+    private val DEAD_ZONE_HEIGHT_LAND = dp(30f)
     private val TEXT_SIZE = sp(60f).toFloat()
     private const val SCROLL_ANIMATION_DURATION_NORMAL = 175
   }
